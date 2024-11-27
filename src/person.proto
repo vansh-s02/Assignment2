@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+// Define the Person message
+message Person {
+  string last_name = 1;      // Last name
+  string first_name = 2;     // First name
+  string date_of_birth = 3;  // Date of birth in YYYY-MM-DD format
+}
