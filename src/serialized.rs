@@ -6,7 +6,7 @@ use std::io::{self, BufRead, BufReader, Write};
 fn main() {
     let matches = Command::new("ProtoBuf Processor")
         .version("1.0")
-        .author("Your Name <your.email@example.com>")
+        .author("Vansh Singhal")
         .about("Process input text files and serialize to protobuf format")
         .arg(
             Arg::new("input")
@@ -66,7 +66,7 @@ fn process_files(input: &str, output: &str) -> io::Result<()> {
     let reader = BufReader::new(input_file);//reading the input file using reader buffer
 
     for line in reader.lines() {
-        let line = line?;
+        let line = line.expect("Error in the readed line");
         let fields: Vec<&str> = line.split(',').collect();
 
         if fields.len() != 3 {

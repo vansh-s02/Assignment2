@@ -11,7 +11,7 @@ use person::Person;
 fn main() {
     let matches = Command::new("ProtoBuf Processor")
         .version("1.0")
-        .author("Your Name <your.email@example.com>")
+        .author("Vansh Singhal")
         .about("Process input protobuf file and write readable output")
         .arg(
             Arg::new("input")
